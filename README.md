@@ -22,13 +22,13 @@ sudo docker build -t="docker_ghdl" .
 
 Execute the following to get the image:
 ```bash
-sudo docker pull rafaelcatrou/docker_ghdl_backend_gcc
+sudo docker pull rafaelcatrou/docker_ghdl
 ```
 
 ### Run
 
 ```bash
-sudo docker run --rm -t -i rafaelcatrou/docker_ghdl_backend_gcc /bin/zsh
+sudo docker run --rm -t -i rafaelcatrou/docker_ghdl /bin/bash
 ```
 
 ## Example
