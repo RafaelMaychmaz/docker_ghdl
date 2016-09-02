@@ -7,7 +7,7 @@
 
 ## Goal
 
-Provide a full build of GHDL with GCC backend using docker.
+Provide a full build of [GHDL](https://github.com/tgingold/ghdl) with GCC backend using docker.
 
 ## Demo
 
