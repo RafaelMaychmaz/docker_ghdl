@@ -11,13 +11,6 @@ Provide a full build of GHDL with GCC backend using docker.
 
 ## Demo
 
-### Build (facultative)
-
-Build GHDL with GCC as backend using Docker
-```bash
-sudo docker build -t="docker_ghdl" .
-```
-
 ### Get the image
 
 Execute the following to get the image:
@@ -33,13 +26,13 @@ sudo docker run --rm -t -i rafaelcatrou/docker_ghdl /bin/bash
 
 ## Example
 
-Start the image, then
+An example is provided in the docker container. It can be run by the following command:
 ```bash
 cd /root/tools/ghdl_check1/ghdl.bash
 ./ghdl.bash
 ```
 
-If all is fine the output shall be:
+Below is its expected output:
 <pre>
 GHDL 0.34dev (20151126) [Dunoon edition]
  Compiled with GNAT Version: GPL 2016 (20160515-49)
