@@ -52,7 +52,7 @@ RUN \
     ./build_ghdl_with_gcc.sh
 
 # --------------------------------------------------------------------------------------------------
-# Check if GHDL isntallation
+# Check if GHDL installation
 # --------------------------------------------------------------------------------------------------
 ENV PATH /root/tools/ghdl_final/bin:$PATH
 
@@ -60,6 +60,11 @@ RUN mkdir /root/tools/ghdl_check1
 COPY src/ghdl_check1 /root/tools/ghdl_check1
 WORKDIR /root/tools/ghdl_check1
 RUN ./ghdl.bash
+
+# Run official GHDL testsuite
+ENV GHDL /root/tools/ghdl_final/bin/ghdl
+WORKDIR /root/tools/download/ghdl/testsuite
+RUN ./testsuite.sh
 
 # --------------------------------------------------------------------------------------------------
 # End

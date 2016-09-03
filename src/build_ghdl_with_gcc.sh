@@ -21,18 +21,6 @@
 # --------------------------------------------------------------------------------------------------
 
 echo "# -------------------------------------------------------------------------------------------"
-echo "# Install M4 tool for building GCC -> GMP"
-echo "# -------------------------------------------------------------------------------------------"
-## Need install m4 tool before configure GCC GMP
-#sudo apt-get install m4
-## Summarise Code coverage information from GCOV
-#sudo apt-get install lcov
-## Manages the compilation of coverage information from gcov
-#sudo apt-get install gcovr
-
-# sudo apt-get install libgmp-dev
-
-echo "# -------------------------------------------------------------------------------------------"
 echo "# Download GCC core"
 echo "# -------------------------------------------------------------------------------------------"
 DOWNLOAD_PATH=`pwd`
@@ -69,7 +57,7 @@ echo "# Configure GHDL + copy sources"
 echo "# -------------------------------------------------------------------------------------------"
 cd ${DOWNLOAD_PATH}/ghdl
 # First configure ghdl, specify gcc source dir and prefix
-./configure --with-gcc=${DOWNLOAD_PATH}/${GCC_VERSION} --prefix=${PREFIX_PATH}
+./configure --with-gcc=${DOWNLOAD_PATH}/${GCC_VERSION} --prefix=${PREFIX_FINAL_GCC_PATH}
 # Then invoke make to copy ghdl sources in the source dir:
 make copy-sources
 
@@ -161,16 +149,10 @@ make install MAKEINFO=true
 echo "# -------------------------------------------------------------------------------------------"
 echo "# Build and install VHDL Librarie"
 echo "# -------------------------------------------------------------------------------------------"
-
 cd ${DOWNLOAD_PATH}/ghdl
-./configure --with-gcc=${DOWNLOAD_PATH}/${GCC_VERSION} --prefix=${PREFIX_FINAL_GCC_PATH}
-make copy-sources
-
-cp -r ${DOWNLOAD_PATH}/ghdl/lib/ghdl/* ${PREFIX_FINAL_GCC_PATH}/lib/ghdl 
 
 echo "STEP MAKE GHDLLIB"
 ls -1 -r ${PREFIX_FINAL_GCC_PATH}/lib/ghdl
-# C'est la que ça plance (donc avant)
 make ghdllib
 
 echo "STEP MAKE INSTALL"
