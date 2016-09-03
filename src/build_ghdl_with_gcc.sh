@@ -168,11 +168,11 @@ make copy-sources
 
 cp -r ${DOWNLOAD_PATH}/ghdl/lib/ghdl/* ${PREFIX_FINAL_GCC_PATH}/lib/ghdl 
 
-echo "CRAKERS BELIN 1"
+echo "STEP MAKE GHDLLIB"
 ls -1 -r ${PREFIX_FINAL_GCC_PATH}/lib/ghdl
 # C'est la que ça plance (donc avant)
 make ghdllib
 
-echo "CRAKERS BELIN 2"
+echo "STEP MAKE INSTALL"
 ls -1 ${PREFIX_PATH}/lib/ghdl
 make install
