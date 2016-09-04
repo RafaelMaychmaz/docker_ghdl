@@ -7,15 +7,20 @@
 
 ## Goal
 
-Provide a full build of [GHDL](https://github.com/tgingold/ghdl) with GCC backend using docker.
+Provide a full build of [GHDL](https://github.com/tgingold/ghdl) with GCC backend using [Docker](https://www.docker.com/).
 
 ## Demo
 
 ### Get the image
 
-Execute the following to get the image:
+Having [Docker](https://www.docker.com/) installed is a prerequisite (See [installation instructionss](https://docs.docker.com/engine/installation/) to install it).
+
+The following command will pull a container with:
++ Ubuntu 16.04 (from parent container)
++ GNAT Ada 2016 (from parent container)
++ GHDL v0.34 with GCC backend
 ```bash
-sudo docker pull rafaelcatrou/docker_ghdl
+sudo docker pull rafaelcatrou/docker_ghdl:v1.1
 ```
 
 ### Run
