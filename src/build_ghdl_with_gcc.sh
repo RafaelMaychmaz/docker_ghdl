@@ -152,9 +152,7 @@ echo "# ------------------------------------------------------------------------
 cd ${DOWNLOAD_PATH}/ghdl
 
 echo "STEP MAKE GHDLLIB"
-ls -1 -r ${PREFIX_FINAL_GCC_PATH}/lib/ghdl
 make ghdllib
 
 echo "STEP MAKE INSTALL"
-ls -1 ${PREFIX_PATH}/lib/ghdl
 make install
