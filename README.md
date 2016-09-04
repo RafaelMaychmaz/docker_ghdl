@@ -26,7 +26,7 @@ sudo docker pull rafaelcatrou/docker_ghdl:v1.1
 ### Run
 
 ```bash
-sudo docker run --rm -t -i rafaelcatrou/docker_ghdl /bin/bash
+sudo docker run --rm -t -i rafaelcatrou/docker_ghdl:v1.1 /bin/bash
 ```
 
 ## Example
