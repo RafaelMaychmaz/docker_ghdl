@@ -13,7 +13,7 @@ Provide a full build of [GHDL](https://github.com/tgingold/ghdl) with GCC backen
 
 ### Get the image
 
-Having [Docker](https://www.docker.com/) installed is a prerequisite (See [installation instructionss](https://docs.docker.com/engine/installation/) to install it).
+Having [Docker](https://www.docker.com/) installed is a prerequisite (See [installation instructions](https://docs.docker.com/engine/installation/) to install it).
 
 The following command will pull a container with:
 + Ubuntu 16.04 (from parent container)
