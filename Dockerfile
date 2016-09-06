@@ -54,8 +54,6 @@ RUN \
 # --------------------------------------------------------------------------------------------------
 # Check if GHDL installation
 # --------------------------------------------------------------------------------------------------
-ENV PATH /root/tools/ghdl_final/bin:$PATH
-
 RUN mkdir /root/tools/ghdl_check1
 COPY src/ghdl_check1 /root/tools/ghdl_check1
 WORKDIR /root/tools/ghdl_check1
