@@ -26,7 +26,7 @@ echo "# ------------------------------------------------------------------------
 DOWNLOAD_PATH=`pwd`
 PREFIX_PATH=/root/tools/gcc
 
-PREFIX_FINAL_GCC_PATH=/root/tools/ghdl_final
+PREFIX_FINAL_GCC_PATH=/usr/local
 
 MIRROR=http://www.netgull.com/gcc/releases
 
