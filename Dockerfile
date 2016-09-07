@@ -54,13 +54,14 @@ RUN \
 # --------------------------------------------------------------------------------------------------
 # Check if GHDL installation
 # --------------------------------------------------------------------------------------------------
-RUN mkdir /root/tools/ghdl_check1
+ENV PATH /usr/local/bin:$PATH
+RUN mkdir -p /root/tools/ghdl_check1
 COPY src/ghdl_check1 /root/tools/ghdl_check1
 WORKDIR /root/tools/ghdl_check1
 RUN ./ghdl.bash
 
 # Run official GHDL testsuite
-ENV GHDL /root/tools/ghdl_final/bin/ghdl
+ENV GHDL /usr/local/bin/ghdl
 WORKDIR /root/tools/download/ghdl/testsuite
 RUN ./testsuite.sh
 
