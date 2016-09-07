@@ -20,13 +20,13 @@ The following command will pull a container with:
 + GNAT Ada 2016 (from parent container)
 + GHDL v0.34 with GCC backend
 ```bash
-sudo docker pull rafaelcatrou/docker_ghdl:v1.1
+sudo docker pull rafaelcatrou/docker_ghdl:v1.2
 ```
 
 ### Run
 
 ```bash
-sudo docker run --rm -t -i rafaelcatrou/docker_ghdl:v1.1 /bin/bash
+sudo docker run --rm -t -i rafaelcatrou/docker_ghdl:v1.2 /bin/bash
 ```
 
 ## Example
